@@ -1,0 +1,14 @@
+{
+  "@@last_modified": "2019-02-07T00:13:59.207769",
+  "title": "Youtubchik",
+  "@title": {
+    "description": "The application title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Login",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

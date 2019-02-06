@@ -6,7 +6,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/ModelBlock.dart';
 import 'package:flutter_app/ModelProvider.dart';
-import 'package:flutter_app/home.dart';
+import 'package:flutter_app/common/localizations.dart';
+import 'package:flutter_app/widgets/login/LoginWidget.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
 //  debugPaintSizeEnabled = true;
@@ -16,8 +18,23 @@ void main() {
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ModelProvider(
+    return GlobalBlocsProvider(
         modelBloc: ModelBloc(),
-        child: MaterialApp(title: 'Redux Items', theme: ThemeData.dark(),  home: HomePage()));
+        child: MaterialApp(
+            localizationsDelegates: [
+              const AppLocalizationsDelegate(),
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+            ],
+            supportedLocales: [
+              const Locale('en', 'US'), // English
+              const Locale('ua', 'UA'), // Ukrainian
+            ],
+            onGenerateTitle: (context) =>
+            AppLocalizations
+                .of(context)
+                .title,
+            theme: ThemeData.dark(),
+            home: LoginWidget()));
   }
 }

@@ -1,0 +1,14 @@
+{
+  "@@last_modified": "2019-02-07T00:08:38.952011",
+  "title": "Ютубчік",
+  "@title": {
+    "description": "Тайтла апи",
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Логин",
+   "@login": {
+      "type": "text",
+      "placeholders": {}
+    }
+}

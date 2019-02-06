@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var block = ModelProvider.of(context);
+    var block = GlobalBlocsProvider.modelBloc(context);
 
     return Scaffold(
         appBar: AppBar(

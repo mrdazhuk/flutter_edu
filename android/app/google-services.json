@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "613288609166",
+    "firebase_url": "https://flutterapi-503ad.firebaseio.com",
+    "project_id": "flutterapi-503ad",
+    "storage_bucket": "flutterapi-503ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613288609166:android:1688f8be40d0cf8e",
+        "android_client_info": {
+          "package_name": "com.ydazhuk.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613288609166-md028igkh19s5fcnrgrt4kb4oj242a67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ydazhuk.flutterapp",
+            "certificate_hash": "7a267a5d9946f51416f287861481cd2e6c680310"
+          }
+        },
+        {
+          "client_id": "613288609166-4tkh1209lap4tlj2moaksb0bucup4h6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9MJkuKrMvx3aBtJroxxCz4R8E81K9Xis"
+        },
+        {
+          "current_key": "AIzaSyCSlPTPrjL-GkZTbYWDbgkcEQlhiukMi9g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613288609166-r5ff87pirt0nusvpgha84c1cdorjalja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
