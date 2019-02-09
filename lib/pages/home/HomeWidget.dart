@@ -29,7 +29,13 @@ class HomeState extends State<HomeWidget> {
                   onPressed: () => Navigator.of(context).pushNamed(ROUTE_PROFILE),
                 )
               ]),
-              body: Text("asasd"),
+          body: RaisedButton(
+              child: Text("Data"),
+              onPressed: () {
+                _appBlock.subscriptions.listen((data) {
+                  print(data);
+                });
+              }),
             ));
   }
 }

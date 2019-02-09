@@ -30,6 +30,14 @@ class AppLocalizations {
   String get loginWithGoogle {
     return Intl.message('Login with Google', name: 'loginWithGoogle');
   }
+
+  String get profile {
+    return Intl.message('Profile', name: 'profile');
+  }
+
+  String get logout {
+    return Intl.message('Logout', name: 'logout');
+  }
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
