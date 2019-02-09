@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/l10n/messages_all.dart';
+import 'package:flutter_app/common/localization/l10n/messages_all.dart';
 import 'package:intl/intl.dart';
 
 class AppLocalizations {
@@ -25,6 +25,10 @@ class AppLocalizations {
 
   String get login {
     return Intl.message('Login', name: 'login');
+  }
+
+  String get loginWithGoogle {
+    return Intl.message('Login with Google', name: 'loginWithGoogle');
   }
 }
 
