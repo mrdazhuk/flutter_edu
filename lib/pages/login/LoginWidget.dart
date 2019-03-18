@@ -16,13 +16,7 @@ class _LoginState extends State<LoginWidget> {
   void initState() {
     super.initState();
     _loginBloc = BlocProvider.of<LoginBloc>(context);
-    _loginBloc.lastLogged.listen((user) {
-      if (user != null) {
-        Navigator.of(context).pushReplacementNamed(ROUTE_HOME);
-      } else {
-        setState(() {});
-      }
-    });
+    _loginBloc.lastLogged.listen(_handleUser);
   }
 
   @override
@@ -30,15 +24,22 @@ class _LoginState extends State<LoginWidget> {
     return Scaffold(
         appBar: AppBar(title: Text(AppLocalizations.of(context).login)),
         body: Center(
-            child: (Row(
+            child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset('assets/images/ic_google.png', scale: 2),
             RaisedButton(
                 child: Text(AppLocalizations.of(context).loginWithGoogle),
-                onPressed: () => {} //_loginBloc.login.add(null),
-                )
+                onPressed: () => _loginBloc.user.listen(_handleUser))
           ],
-        ))));
+            )));
+  }
+
+  void _handleUser(user) {
+    if (user != null) {
+      Navigator.of(context).pushReplacementNamed(ROUTE_HOME);
+    } else {
+      setState(() {});
+    }
   }
 }

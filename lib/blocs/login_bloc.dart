@@ -9,10 +9,6 @@ class LoginBloc extends BlocBase {
 
   Stream<User> get lastLogged => _auth.getLoggedUser();
 
-  void _login() {
-
-  }
-
   @override
   void dispose() {
   }

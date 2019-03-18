@@ -38,6 +38,26 @@ class AppLocalizations {
   String get logout {
     return Intl.message('Logout', name: 'logout');
   }
+
+  String get tabHome {
+    return Intl.message('Home', name: 'tabHome');
+  }
+
+  String get tabSubscriptions {
+    return Intl.message('Subscribtions', name: 'tabSubscriptions');
+  }
+
+  String get tabChannelMain {
+    return Intl.message('Main', name: 'tabChannelMain');
+  }
+
+  String get tabChannelVideos {
+    return Intl.message('Video', name: 'tabChannelVideos');
+  }
+
+  String get tabChannelAbout {
+    return Intl.message('About channel', name: 'tabChannelAbout');
+  }
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

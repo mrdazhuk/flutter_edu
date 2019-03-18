@@ -1,11 +1,9 @@
-import 'package:rxdart/rxdart.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
 
 class PreferenceRepository {
 //  static const _USER_ID = "ID";
 //  static const _USER_NAME = "NAME";
 //
-  var _preference = Observable.fromFuture(SharedPreferences.getInstance());
 //
 //  Observable<void> saveUser(User domain.user) {
 //    return _preference.flatMap((pref) => Observable.concat(List.unmodifiable(

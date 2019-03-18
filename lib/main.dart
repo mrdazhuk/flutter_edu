@@ -4,13 +4,16 @@
 
 // You can read about packages here: https://flutter.io/using-packages/
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app/bloc_provider.dart';
 import 'package:flutter_app/blocs/app_bloc.dart';
 import 'package:flutter_app/blocs/login_bloc.dart';
 import 'package:flutter_app/common/localization/localizations.dart';
+import 'package:flutter_app/domain/api/api.dart';
 import 'package:flutter_app/pages/home/HomeWidget.dart';
 import 'package:flutter_app/pages/login/LoginWidget.dart';
 import 'package:flutter_app/pages/profile/ProfileWidget.dart';
+import 'package:flutter_app/pages/searching/SearchingWidget.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
@@ -20,12 +23,14 @@ void main() {
 
 const ROUTE_ENTRANCE = '/';
 const ROUTE_HOME = '/home';
+const ROUTE_SEARCH = '/search';
 const ROUTE_PROFILE = '/profile';
 
 class App extends StatelessWidget {
   final _routes = {
     ROUTE_ENTRANCE: (context) => LoginWidget(),
     ROUTE_HOME: (context) => HomeWidget(),
+    ROUTE_SEARCH: (context) => SearchingWidget(),
     ROUTE_PROFILE: (context) => ProfileWidget()
   };
 
@@ -36,6 +41,7 @@ class App extends StatelessWidget {
         child: BlocProvider(
             bloc: LoginBloc(),
             child: MaterialApp(
+//                navigatorKey: alice.getNavigatorKey(),
                 localizationsDelegates: [
                   const AppLocalizationsDelegate(),
                   GlobalMaterialLocalizations.delegate,

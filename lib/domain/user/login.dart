@@ -28,12 +28,11 @@ class Auth {
     return _completer.future;
   }
 
-  Future<User> _getUser(GoogleSignInAccount singInAccount) async {
-    return singInAccount.authentication.then((singInAuthentication) {
-      final oauth = OAuth(singInAuthentication.accessToken);
+  Future<User> _getUser(GoogleSignInAccount singInAccount) async =>
+      singInAccount.authentication.then((singInAuthentication) {
+        final oauth = OAuth(singInAuthentication.accessToken);
 
-      return User(singInAccount.id, singInAccount.displayName, singInAccount.email,
-          singInAccount.photoUrl, oauth);
-    });
-  }
+        return User(singInAccount.id, singInAccount.displayName, singInAccount.email,
+            singInAccount.photoUrl, oauth);
+      });
 }

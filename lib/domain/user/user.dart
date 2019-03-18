@@ -20,7 +20,5 @@ class OAuth {
 class UserBloc {
   final Auth _auth = Auth();
 
-  UserBloc() {}
-
   Observable<User> getUser() => _auth.login();
 }

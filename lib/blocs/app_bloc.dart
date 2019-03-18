@@ -14,10 +14,16 @@ class AppBloc extends BlocBase {
 
   Stream<User> get user => _auth.getLoggedUser();
 
-  Stream<List<Subscription>> get subscriptions => _api.getSubscriptions();
+  Future<List<Subscription>> get subscriptions =>
+      _api.getSubscriptions().reduce((previous, subscription) {
+        return List.from(previous)
+          ..addAll(subscription);
+      });
+
+  Future<Channel> getChannelById(String id) => _api.getChannel(id);
+
+  logout() => _auth.logout();
 
   @override
   void dispose() {}
-
-  logout() {}
 }

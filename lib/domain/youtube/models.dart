@@ -1,5 +1,24 @@
+class Channel {
+  final String id;
+  final String title;
+  final String description;
+  final Thumbnails thumbnails;
+  final Statistics statistics;
+
+  Channel({this.id, this.title, this.description, this.thumbnails, this.statistics});
+}
+
+class Statistics {
+  final int viewCount;
+  final int commentCount;
+  final int subscriberCount;
+  final int videoCount;
+
+  Statistics({this.viewCount, this.commentCount, this.subscriberCount, this.videoCount});
+}
+
 class Subscription {
-  final Channel channel;
+  final SubscriptionChannel channel;
   final ContentDetails contentDetails;
 
   Subscription({this.channel, this.contentDetails});
@@ -13,7 +32,7 @@ class ContentDetails {
   ContentDetails({this.totalItemCount, this.newItemCount, this.activityType});
 }
 
-class Channel {
+class SubscriptionChannel {
   final DateTime publishedAt;
   final String title;
   final String description;
@@ -21,13 +40,12 @@ class Channel {
   final String channelId;
   final Thumbnails thumbnails;
 
-  Channel(
-      {this.publishedAt,
-      this.title,
-      this.description,
-      this.resourceId,
-      this.channelId,
-      this.thumbnails});
+  SubscriptionChannel({this.publishedAt,
+    this.title,
+    this.description,
+    this.resourceId,
+    this.channelId,
+    this.thumbnails});
 }
 
 class Thumbnails {
